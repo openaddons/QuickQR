@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QuickQR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      width: 150px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .radio-label {
+      margin-bottom: 5px;
+    }
+    .custom-text-input-container {
+      display: none;
+      margin-top: 10px;
+    }
+    .generate-qr-btn {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    div {
+  display: -webkit-box;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+a{color: black;}
+a:hover{color: blue;}
+  </style>
+</head>
+<body>
+  <h1><a href="https://openaddons.com/quickqr-from-url" target="_blank" style="text-decoration: none;">&#10697; Quick QR <br /></a></h1>
+  <div class="container">
+    <div>
+      <input type="radio" id="current-url-radio" name="qr-source" value="current-url" checked>
+      <label for="current-url-radio" class="radio-label">Current Tab URL</label>
+    </div>
+    <div>
+      <input type="radio" id="custom-text-radio" name="qr-source" value="custom-text">
+      <label for="custom-text-radio" class="radio-label">Custom URL</label>
+    </div>
+    <div class="custom-text-input-container">
+      <input type="text" id="custom-text-input" placeholder="Enter Custom URL" disabled>
+    </div>
+    <button id="generate-qr-btn" class="generate-qr-btn">Generate QR Code</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
